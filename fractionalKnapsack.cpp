@@ -1,6 +1,5 @@
 #include<bits/stdc++.h>
 using namespace std;
-
 struct item
 {
     int weight;
@@ -42,5 +41,4 @@ int main()
     }
     cout << totalProfit << endl;
 }
-
 
