@@ -78,7 +78,8 @@ int main()
     cin >> n >> capacity;
     int weight[n], value[n];
 
-    for(int i = 0; i < n; i++) {
+    for(int i = 0; i < n; i++)
+    {
         cin >> weight[i];
         cin >> value[i];
     }
