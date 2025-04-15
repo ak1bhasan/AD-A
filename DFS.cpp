@@ -1,20 +1,74 @@
+//#include<bits/stdc++.h>
+//using namespace std;
+//int main()
+//{
+//    int node, edge, start_node;
+//
+//    cout << "Enter number of nodes: ";
+//    cin >> node;
+//
+//    cout << "Enter number of edges: ";
+//    cin >> edge;
+//
+//    vector<vector<int>> adj(node+1);
+//    vector<bool> visit(node+1, false);
+//
+//    cout << "Enter the edges: " << endl;
+//
+//    for( int i = 0; i < edge; i++ ) {
+//        int a, b; cin >> a >> b;
+//        adj[a].push_back(b);
+//        adj[b].push_back(a);
+//    }
+//
+//    for( int i = 1; i <= node; i++ ) {
+//        sort( adj[i].begin(), adj[i].end() );
+//    }
+//
+//    cout << "Enter the start node: ";
+//    cin >> start_node;
+//
+//    stack<int> s;
+//    s.push(start_node);
+//
+//    visit[start_node] = true;
+//    cout << "DFS Result:" << endl;
+//
+//    while( !s.empty() ) {
+//        int current = s.top();
+//        s.pop();
+//        cout << current << endl;
+//        for( auto it = adj[current].rbegin(); it != adj[current].rend(); it++ ) {
+//            if( !visit[*it] ) {
+//                visit[*it] = true;
+//                s.push(*it);
+//            }
+//        }
+//    }
+//}
+
+
+
+
+
+
+
+
+
+
+
+
 #include<bits/stdc++.h>
 using namespace std;
 int main()
 {
     int node, edge, start_node;
-
-    cout << "Enter number of nodes: ";
-    cin >> node;
-
-    cout << "Enter number of edges: ";
-    cin >> edge;
+    cin >> node >> edge;
 
     vector<vector<int>> adj(node+1);
     vector<bool> visit(node+1, false);
 
     cout << "Enter the edges: " << endl;
-
     for( int i = 0; i < edge; i++ ) {
         int a, b; cin >> a >> b;
         adj[a].push_back(b);
@@ -22,10 +76,9 @@ int main()
     }
 
     for( int i = 1; i <= node; i++ ) {
-        sort( adj[i].begin(), adj[i].end() );
+        sort(adj[i].begin(), adj[i].end());
     }
 
-    cout << "Enter the start node: ";
     cin >> start_node;
 
     stack<int> s;
@@ -34,7 +87,8 @@ int main()
     visit[start_node] = true;
     cout << "DFS Result:" << endl;
 
-    while( !s.empty() ) {
+    while( !s.empty() )
+    {
         int current = s.top();
         s.pop();
         cout << current << endl;

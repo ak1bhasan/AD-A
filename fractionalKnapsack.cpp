@@ -1,5 +1,7 @@
+/// Time complexity O(n log n)
 #include<bits/stdc++.h>
 using namespace std;
+
 struct item
 {
     int weight;
@@ -11,6 +13,7 @@ bool comp(item item1, item item2)
 {
     return item1.ratioo > item2.ratioo;
 }
+
 int main()
 {
     int n,cap;
@@ -41,4 +44,8 @@ int main()
     }
     cout << totalProfit << endl;
 }
+
+
+
+
 
